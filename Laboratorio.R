@@ -63,7 +63,7 @@ hist(laboratorio$edad)
 boxplot(laboratorio$edad)
 
 ## Gráfica de datos 
-hist(laboratorio$resultado)
+plot(laboratorio$resultado)
 boxplot(laboratorio$resultado)
 
 ###########
@@ -73,7 +73,7 @@ install.packages("ggplot2")
 library(ggplot2)
 
 ggplot(data = laboratorio)+
-  geom_histogram(mapping = aes(x= edad, color=Mora))
+  geom_histogram(mapping = aes(x= edad))
 
 ###########
 #Instalacion de librería para ver datos perdidos
