@@ -28,7 +28,7 @@ INTEGRANTES:
 
 *Inca
 
-*Santos
+*Santos Quispe, Benji
 
 *Toledo Paulino, Luis
 
@@ -37,12 +37,43 @@ INTEGRANTES:
 Paso 1: Entendimiento del negocio
 
 1.1 Determinar el objetivo del negocio (organización)
+Brindar una atención asistencial y de apoyo al diagnóstico especializada.
+Emitiendo informes y resultados confiables y oportunos en los distintos servicios asistenciales y así
+realizar un proceso de atención asistencial con óptimo nivel de calidad y seguridad. Todo esto
+basados en la mineria de datos usando tecnicas de modelado, descriptivo y predictivo.
 
 1.2 Evaluar la situación actual (entorno)
+Se cuenta con una base de datos Mysql con información detallada de los pacientes
+que han sido atendidos en alguna de las areas del laboratorio desde el año 2005 hasta la
+actualidad, por lo que a priori se puede afirmar que se dispone de una cantidad de datos
+más que suficiente para poder resolver el problema. Esta información incluye toda la informacion de
+acceso a los analisis clinicos de diabetes en los laboratorios de todas las sedes, otros datos personales del paciente que nos pueden ser útiles a la hora de hacer la minería de datos.
 
 1.3 Determinar el objetivo de la minería de datos
+EL objetivo de la mineria de datos en nuestro caso, apunta a poder evaluar las variables obtenidas durante arduos años de trabajo, y con esto, cumplir nuestro objetivo de negocio, que es ofrecer servicios y/o procesos de atención asistencial con óptimo nivel de calidad y seguridad, proyectandonos a un factor adicional que es la prediccion en las futuras asistencias.
+
+ - Predecir ......
+ - Identificar ....
 
 1.4 Realizar un plan de proyecto
+
+El proyecto se dividirá en las siguientes etapas para facilitar su organización y estimar el
+tiempo de realización del mismo:
+ - Etapa 1: Análisis de la estructura de los datos y la información de la base de datos.
+Tiempo estimado: 4 semanas.
+ - Etapa 2: Ejecución de consultas para tener muestras representativas de los datos.
+Tiempo estimado: 2 semana.
+ - Etapa 3: Preparación de los datos (selección, limpieza, conversión y formateo, si
+fuera necesario) para facilitar la minería de datos sobre ellos. Tiempo estimado: 5
+semanas.
+ - Etapa 4: Elección de las técnicas de modelado y ejecución de las mismas sobre los
+datos. Tiempo estimado: 2 semana.
+ - Etapa 5: Análisis de los resultados obtenidos en la etapa anterior, si fuera necesario
+repetir la etapa 4. Tiempo estimado: 1 semana.
+ - Etapa 6: Producción de informes con los resultados obtenidos en función de los
+objetivos de negocio y los criterios de éxito establecidos. Tiempo estimado: 1
+semana.
+ - Etapa 7: Presentación de los resultados finales. Tiempo estimado: 2 semana.
 
 Paso 2: Entendimiento de la data
 
