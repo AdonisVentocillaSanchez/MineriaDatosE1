@@ -179,7 +179,18 @@ plot(laboratorio$resultado)
 
 ### 2.4 Verificación de la calidad de la data
 
+Las variables con datos nulos son los siguientes:
 
+- Presión.arterial.diastólica:
+- Tríceps.espesor.del.pliegue.cutáneo:
+- X2.horas.suero.insulina:
+
+```{r echo=TRUE}
+#Ver porcentaje de datos nulos por cada variable
+var1 = mean(is.na(laboratorio$Presión.arterial.diastólica)) * 100
+var2 = mean(is.na(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)) * 100
+var3 = mean(is.na(laboratorio$X2.horas.suero.insulina)) * 100
+```
 
 
 

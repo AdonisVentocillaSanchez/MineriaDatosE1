@@ -87,9 +87,9 @@ nulos
 summary(nulos)
 
 #Ver datos nulos por cada variable
-mean(is.na(laboratorio$Presión.arterial.diastólica))
-mean(is.na(laboratorio$Tríceps.espesor.del.pliegue.cutáneo))
-mean(is.na(laboratorio$X2.horas.suero.insulina))
+mean(is.na(laboratorio$Presión.arterial.diastólica)) * 100
+mean(is.na(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)) * 100
+mean(is.na(laboratorio$X2.horas.suero.insulina)) * 100
 
 #####################
 #calidad de datos
