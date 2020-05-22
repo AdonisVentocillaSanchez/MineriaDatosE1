@@ -64,7 +64,6 @@ boxplot(laboratorio$edad)
 
 ## Gráfica de datos 
 plot(laboratorio$resultado)
-boxplot(laboratorio$resultado)
 
 ###########
 #Instalación de libreria para gráficas
@@ -126,8 +125,17 @@ summary(labnew)
 #construir data
 ##Tomar 2 o mas variable para crear nuevas variables
 
+#########
+#Instalación de libreria para discretizar
+#########
+install.packages("arules")
+library(arules)
 
+Embarazo_disc = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 4)
+summary(Embarazo_disc)
 
+Embarazo_disc1 = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 8)
+summary(Embarazo_disc1)
 
 #Integración data
 
