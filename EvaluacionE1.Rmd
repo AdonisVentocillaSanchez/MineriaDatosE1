@@ -3,9 +3,11 @@ title: "EvaluacionE1"
 author: "Inca, Santos, Toledo, Ventocilla"
 date: "21/5/2020"
 output:
-  word_document: default
-  pdf_document: default
   html_document: default
+  pdf_document: default
+  word_document: default
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -225,16 +227,16 @@ head(labnew)
 
 Instalamos la librería para imputar datos.
 
-```{r eval=FALSE, message=FALSE}
+```{r eval=FALSE, eval=FALSE, message=FALSE}
 install.packages("DMwR")
 install.packages("VIM")
-library(DMwR)
-library(VIM)
+require(DMwR)
+require(VIM)
 ```
 
 Utilizaremos el método de imputación de KNN vecinos más cercanos para llenar los datos vacios en cada variable.
 
-```{r message=FALSE, warning=FALSE}
+```{r echo=TRUE, warning=FALSE, eval=FALSE}
 labnew2 = knnImputation(labnew)
 summary(labnew2)
 ```
@@ -245,14 +247,14 @@ Instalamos la librería para discretizar datos.
 
 ```{r eval=FALSE}
 install.packages("arules")
-library(arules)
+require(arules)
 ```
 
 Creamos las variables discretizadas a partir de: 
 - NumeroEmbarazos
 - edad
 
-```{r message=FALSE}
+```{r eval=FALSE, message=FALSE, include=FALSE}
 #Segmentamos en 8 la variable NumeroEmbarazos 
 Embarazo_disc = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 8)
 #Segmentamos en 6 la variable edad
@@ -263,7 +265,7 @@ Edad_disc = discretize(labnew2$edad, method = "interval", categories = 6)
 
 Juntamos las 2 variables creadas anteriormente con la data principal.
 
-```{r warning=FALSE}
+```{r eval=FALSE, warning=FALSE}
 labnew3=cbind(labnew2, Embarazo_disc)
 labnew4=cbind(labnew3, Edad_disc)
 summary(labnew4)
@@ -275,7 +277,7 @@ summary(labnew4)
 Realizamos un nuevo archivo "data_laboratorio.csv" con la nueva data creada. 
 Esta nueva data se puede ubicar en: <https://raw.githubusercontent.com/AdonisVentocillaSanchez/MineriaDatosE1/master/data_laboratorio.csv>
 
-```{r eval=FALSE}
+```{r eval=FALSE, include=TRUE}
 write.csv(labnew3,file = "data_laboratorio.csv")
 #obtenemos la data
 getwd()
