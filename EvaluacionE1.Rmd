@@ -110,28 +110,36 @@ str(laboratorio)
 
 #### Gráfica de datos NumeroEmbarazos
 
+<<<<<<< HEAD
+
+
+=======
 #Estamos notando que la cantidad de embarazosos en las personas del laboratorio llevan un descenso
 #significativo, y es como notamos que la mayor parte de 
 #personas han estado embarazadas solo una vez, y que hay claramente eventos atipicos superando los 13 #embarazos. 
+>>>>>>> 9d4e05461e04661d4b2237aaa510c15dacc02666
 ```{r}
-hist(laboratorio$NumeroEmbarazos)
-boxplot(laboratorio$NumeroEmbarazos)
+par(mfrow=c(2,1))
+boxplot(laboratorio$NumeroEmbarazos, horizontal=TRUE, main = "Número de embarazos por persona")
+hist(laboratorio$NumeroEmbarazos, main = "")
 ```
 
 
 #### Gráfica de datos Presión.arterial.diastólica
 #Observamos que en la mayoria de las personas la presion arterial varia de 40 a 100mmhg, ascendiendo hasta #un punto medio de aproximadamente 70mmhg en el cual se muestra la mayor cantidad. Así mismo notamos los #eventos atipicos en personas que estan teniendo menos de 40mmhg y otros superan los 110mmhg #respectivamente.
 ```{r}
-hist(laboratorio$Presión.arterial.diastólica)
-boxplot(laboratorio$Presión.arterial.diastólica)
+par(mfrow=c(2,1))
+boxplot(laboratorio$Presión.arterial.diastólica, horizontal=TRUE, main = "Presión Arterial Diastólica")
+hist(laboratorio$Presión.arterial.diastólica, main = "")
 ```
 
 
 #### Gráfica de datos Tríceps.espesor.del.pliegue.cutáneo
 
 ```{r}
-hist(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)
-boxplot(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)
+par(mfrow=c(2,1))
+boxplot(laboratorio$Tríceps.espesor.del.pliegue.cutáneo, horizontal = TRUE, main = "Esppesor del pliegue cutáneo")
+hist(laboratorio$Tríceps.espesor.del.pliegue.cutáneo, main = "")
 ```
 
 
@@ -139,8 +147,9 @@ boxplot(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)
 #### Gráfica de datos X2.horas.suero.insulina
 
 ```{r}
-hist(laboratorio$X2.horas.suero.insulina)
-boxplot(laboratorio$X2.horas.suero.insulina)
+par(mfrow=c(2,1))
+boxplot(laboratorio$X2.horas.suero.insulina, horizontal = TRUE, main = "Suero de insulina por cada 2 horas")
+hist(laboratorio$X2.horas.suero.insulina, main = "")
 ```
 
 
@@ -150,8 +159,9 @@ boxplot(laboratorio$X2.horas.suero.insulina)
 #de personas existe obesidad, como tambien una cantidad notoria de mejor salud en el indice de MC 20 a #25kg y un muy mal indice de 40 a 45kg. Asi mismo notamos vamos atipicos menores a 5kg y mayores a 65kg.
 
 ```{r}
-hist(laboratorio$Índice.de.masa.corporal)
-boxplot(laboratorio$Índice.de.masa.corporal)
+par(mfrow=c(2,1))
+boxplot(laboratorio$Índice.de.masa.corporal, horizontal = TRUE, main = "Índice de masa corporal (peso en kg / (altura en m) ^ 2)")
+hist(laboratorio$Índice.de.masa.corporal, main = "")
 ```
 
 
@@ -159,8 +169,9 @@ boxplot(laboratorio$Índice.de.masa.corporal)
 #### Gráfica de datos Función.pedigrí.de.la.diabetes
 #Encontramos que la mayoría de personas en estudio tienen entre un 20% y 30% de probabilidad de tener #diabetes según antecedentes familiares.
 ```{r}
-hist(laboratorio$Función.pedigrí.de.la.diabetes)
-boxplot(laboratorio$Función.pedigrí.de.la.diabetes)
+par(mfrow=c(2,1))
+boxplot(laboratorio$Función.pedigrí.de.la.diabetes, horizontal = TRUE, main = "Función de pedigrí de la diabetes")
+hist(laboratorio$Función.pedigrí.de.la.diabetes, main = "")
 ```
 
 
@@ -168,8 +179,9 @@ boxplot(laboratorio$Función.pedigrí.de.la.diabetes)
 #### Gráfica de datos edad
 
 ```{r}
-hist(laboratorio$edad)
-boxplot(laboratorio$edad)
+par(mfrow=c(2,1))
+boxplot(laboratorio$edad, horizontal = TRUE, main = "Rango de edad")
+hist(laboratorio$edad, main = "")
 ```
 
 
@@ -177,7 +189,7 @@ boxplot(laboratorio$edad)
 #### Gráfica de datos resultado
 
 ```{r}
-plot(laboratorio$resultado)
+plot(laboratorio$resultado, main = "Resultados de personas con diabetes")
 ```
 
 
@@ -190,11 +202,11 @@ Las variables con datos nulos son los siguientes:
 - Tríceps.espesor.del.pliegue.cutáneo:
 - X2.horas.suero.insulina:
 
-```{r echo=TRUE}
+```{r eval=FALSE}
 #Ver porcentaje de datos nulos por cada variable
-var1 = mean(is.na(laboratorio$Presión.arterial.diastólica)) * 100
-var2 = mean(is.na(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)) * 100
-var3 = mean(is.na(laboratorio$X2.horas.suero.insulina)) * 100
+mean(is.na(laboratorio$Presión.arterial.diastólica)) * 100           #10.9375
+mean(is.na(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)) * 100   #8.59375
+mean(is.na(laboratorio$X2.horas.suero.insulina)) * 100               #.114583
 ```
 
 
