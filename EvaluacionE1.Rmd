@@ -110,14 +110,8 @@ str(laboratorio)
 
 #### Gráfica de datos NumeroEmbarazos
 
-<<<<<<< HEAD
+Estamos notando que la cantidad de embarazosos en las personas del laboratorio llevan un descenso significativo, y es como notamos que la mayor parte de personas han estado embarazadas solo una vez, y que hay claramente eventos atipicos superando los 13 embarazos. 
 
-
-=======
-#Estamos notando que la cantidad de embarazosos en las personas del laboratorio llevan un descenso
-#significativo, y es como notamos que la mayor parte de 
-#personas han estado embarazadas solo una vez, y que hay claramente eventos atipicos superando los 13 #embarazos. 
->>>>>>> 9d4e05461e04661d4b2237aaa510c15dacc02666
 ```{r}
 par(mfrow=c(2,1))
 boxplot(laboratorio$NumeroEmbarazos, horizontal=TRUE, main = "Número de embarazos por persona")
@@ -126,7 +120,9 @@ hist(laboratorio$NumeroEmbarazos, main = "")
 
 
 #### Gráfica de datos Presión.arterial.diastólica
-#Observamos que en la mayoria de las personas la presion arterial varia de 40 a 100mmhg, ascendiendo hasta #un punto medio de aproximadamente 70mmhg en el cual se muestra la mayor cantidad. Así mismo notamos los #eventos atipicos en personas que estan teniendo menos de 40mmhg y otros superan los 110mmhg #respectivamente.
+
+Observamos que en la mayoria de las personas la presion arterial varia de 40 a 100mmhg, ascendiendo hasta #un punto medio de aproximadamente 70mmhg en el cual se muestra la mayor cantidad. Así mismo notamos los #eventos atipicos en personas que estan teniendo menos de 40mmhg y otros superan los 110mmhg #respectivamente.
+
 ```{r}
 par(mfrow=c(2,1))
 boxplot(laboratorio$Presión.arterial.diastólica, horizontal=TRUE, main = "Presión Arterial Diastólica")
@@ -155,8 +151,8 @@ hist(laboratorio$X2.horas.suero.insulina, main = "")
 
 
 #### Gráfica de datos Índice.de.masa.corporal
-#Notamos que el indice de masa corporal se eleva entre 25 y 40kg, lo cual nos muestra que en la mayoria
-#de personas existe obesidad, como tambien una cantidad notoria de mejor salud en el indice de MC 20 a #25kg y un muy mal indice de 40 a 45kg. Asi mismo notamos vamos atipicos menores a 5kg y mayores a 65kg.
+
+Notamos que el indice de masa corporal se eleva entre 25 y 40kg, lo cual nos muestra que en la mayoria de personas existe obesidad, como tambien una cantidad notoria de mejor salud en el indice de MC 20 a 25kg y un muy mal indice de 40 a 45kg. Asi mismo notamos vamos atipicos menores a 5kg y mayores a 65kg.
 
 ```{r}
 par(mfrow=c(2,1))
@@ -167,7 +163,9 @@ hist(laboratorio$Índice.de.masa.corporal, main = "")
 
 
 #### Gráfica de datos Función.pedigrí.de.la.diabetes
-#Encontramos que la mayoría de personas en estudio tienen entre un 20% y 30% de probabilidad de tener #diabetes según antecedentes familiares.
+
+Encontramos que la mayoría de personas en estudio tienen entre un 20% y 30% de probabilidad de tener diabetes según antecedentes familiares.
+
 ```{r}
 par(mfrow=c(2,1))
 boxplot(laboratorio$Función.pedigrí.de.la.diabetes, horizontal = TRUE, main = "Función de pedigrí de la diabetes")
