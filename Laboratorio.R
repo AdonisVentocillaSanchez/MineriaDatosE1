@@ -140,11 +140,17 @@ library(arules)
 Embarazo_disc = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 4)
 summary(Embarazo_disc)
 
-Embarazo_disc1 = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 8)
+Embarazo_disc1 = discretize(labnew$NumeroEmbarazos, method = "interval", categories = 8)
 summary(Embarazo_disc1)
 
-Concentrac.blucosa.plama_discretizada = discretize(labnew2$Concentrac.blucosa.plama, method = "interval", categories = 4)
+Concentrac.blucosa.plama_discretizada = discretize(labnew$Concentrac.blucosa.plama, method = "interval", categories = 4)
 summary(Concentrac.blucosa.plama_discretizada)
+
+NumeroEmbarazos_disc=nclass.Sturges(labnew$NumeroEmbarazos)
+summary(NumeroEmbarazos_disc)
+
+NumeroEmbarazos_discretizada = discretize(labnew$NumeroEmbarazos, method = "interval", categories = 3)
+summary(NumeroEmbarazos_discretizada)
 #Integración data
 
 
@@ -153,5 +159,7 @@ summary(Concentrac.blucosa.plama_discretizada)
 
 #Formato de data
 
-
+write.csv(labnew,file = "data_laboratorio.csv")
+#obtenemos la data
+getwd()
 
