@@ -26,7 +26,7 @@ FECHA  : 22/05/2020
 
 # INTEGRANTES:
 
-*Inca
+*Inca Huaman, Cielo
 
 *Santos Quispe, Benji
 
@@ -213,25 +213,67 @@ mean(is.na(laboratorio$X2.horas.suero.insulina)) * 100               #9.114583
 
 ### 3.1 Seleccionar la data
 
+Suprimimos la variable N debido a que no la utilizaremos para los posteriores análisis.
 
+```{r}
+labnew = laboratorio[,2:10]
+head(labnew)
+```
 
 ### 3.2 Limpiar la data
 
+Instalamos la librería para imputar datos.
 
+```{r eval=FALSE}
+install.packages("DMwR")
+library(DMwR)
+```
+
+Utilizaremos el método de imputación de KNN vecinos más cercanos para llenar los datos vacios en cada variable.
+
+```{r}
+labnew2 = knnImputation(labnew)
+dim(labnew2)
+summary(labnew2)
+```
 
 ### 3.3 Construir data
 
+Instalamos la librería para discretizar datos.
 
+```{r eval=FALSE}
+install.packages("arules")
+library(arules)
+```
+
+Creamos las variables discretizadas a partir de: 
+- NumeroEmbarazos
+- edad
+
+```{r}
+#Segmentamos en 8 la variable NumeroEmbarazos 
+Embarazo_disc = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 8)
+#Segmentamos en 6 la variable edad
+Edad_disc = discretize(labnew2$edad, method = "interval", categories = 6)
+```
 
 ### 3.4 Integración de data
 
+Juntamos las 2 variables creadas anteriormente con la data principal.
+
+```{r warning=FALSE}
+labnew3=cbind(labnew2, Embarazo_disc)
+labnew4=cbind(labnew3, Edad_disc)
+summary(labnew4)
+```
 
 
 ### 3.5 Formato de data
 
 Realizamos un nuevo archivo "data_laboratorio.csv" con la nueva data creada. 
+
 ```{r eval=FALSE}
-write.csv(labnew2,file = "data_laboratorio.csv")
+write.csv(labnew3,file = "data_laboratorio.csv")
 #obtenemos la data
 getwd()
 ```

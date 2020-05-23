@@ -122,12 +122,6 @@ summary(labnew2)
 ##--Comparación con la data original
 summary(labnew)
 
-X2.horas.suero.insulina_disc=nclass.Sturges(labnew2$X2.horas.suero.insulina)
-summary(X2.horas.suero.insulina_disc)
-
-X2.horas.suero.insulina = discretize(labnew2$X2.horas.suero.insulina, method = "interval", categories = 7)
-summary(X2.horas.suero.insulina)
-
 #construir data
 ##Tomar 2 o mas variable para crear nuevas variables
 
@@ -137,29 +131,21 @@ summary(X2.horas.suero.insulina)
 install.packages("arules")
 library(arules)
 
-Embarazo_disc = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 4)
+Embarazo_disc = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 8)
 summary(Embarazo_disc)
 
-Embarazo_disc1 = discretize(labnew$NumeroEmbarazos, method = "interval", categories = 8)
-summary(Embarazo_disc1)
+Edad_disc = discretize(labnew2$edad, method = "interval", categories = 6)
+summary(Edad_disc)
 
-Concentrac.blucosa.plama_discretizada = discretize(labnew$Concentrac.blucosa.plama, method = "interval", categories = 4)
-summary(Concentrac.blucosa.plama_discretizada)
-
-NumeroEmbarazos_disc=nclass.Sturges(labnew$NumeroEmbarazos)
-summary(NumeroEmbarazos_disc)
-
-NumeroEmbarazos_discretizada = discretize(labnew$NumeroEmbarazos, method = "interval", categories = 3)
-summary(NumeroEmbarazos_discretizada)
 #Integración data
 
-
-
-
+labnew3=cbind(labnew2, Embarazo_disc)
+labnew4=cbind(labnew3, Edad_disc)
+summary(labnew4)
 
 #Formato de data
 
-write.csv(labnew,file = "data_laboratorio.csv")
+write.csv(labnew4,file = "data_laboratorio.csv")
 #obtenemos la data
 getwd()
 
