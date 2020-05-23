@@ -110,6 +110,9 @@ str(laboratorio)
 
 #### Gráfica de datos NumeroEmbarazos
 
+#Estamos notando que la cantidad de embarazosos en las personas del laboratorio llevan un descenso
+#significativo, y es como notamos que la mayor parte de 
+#personas han estado embarazadas solo una vez, y que hay claramente eventos atipicos superando los 13 #embarazos. 
 ```{r}
 hist(laboratorio$NumeroEmbarazos)
 boxplot(laboratorio$NumeroEmbarazos)
@@ -117,7 +120,7 @@ boxplot(laboratorio$NumeroEmbarazos)
 
 
 #### Gráfica de datos Presión.arterial.diastólica
-
+#Observamos que en la mayoria de las personas la presion arterial varia de 40 a 100mmhg, ascendiendo hasta #un punto medio de aproximadamente 70mmhg en el cual se muestra la mayor cantidad. Así mismo notamos los #eventos atipicos en personas que estan teniendo menos de 40mmhg y otros superan los 110mmhg #respectivamente.
 ```{r}
 hist(laboratorio$Presión.arterial.diastólica)
 boxplot(laboratorio$Presión.arterial.diastólica)
