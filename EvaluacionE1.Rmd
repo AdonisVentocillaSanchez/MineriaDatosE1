@@ -110,25 +110,30 @@ str(laboratorio)
 
 #### Gráfica de datos NumeroEmbarazos
 
+
+
 ```{r}
-hist(laboratorio$NumeroEmbarazos)
-boxplot(laboratorio$NumeroEmbarazos)
+par(mfrow=c(2,1))
+boxplot(laboratorio$NumeroEmbarazos, horizontal=TRUE, main = "Número de embarazos por persona")
+hist(laboratorio$NumeroEmbarazos, main = "")
 ```
 
 
 #### Gráfica de datos Presión.arterial.diastólica
 
 ```{r}
-hist(laboratorio$Presión.arterial.diastólica)
-boxplot(laboratorio$Presión.arterial.diastólica)
+par(mfrow=c(2,1))
+boxplot(laboratorio$Presión.arterial.diastólica, horizontal=TRUE, main = "Presión Arterial Diastólica")
+hist(laboratorio$Presión.arterial.diastólica, main = "")
 ```
 
 
 #### Gráfica de datos Tríceps.espesor.del.pliegue.cutáneo
 
 ```{r}
-hist(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)
+par(mfrow=c(2,1))
 boxplot(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)
+hist(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)
 ```
 
 
@@ -136,6 +141,7 @@ boxplot(laboratorio$Tríceps.espesor.del.pliegue.cutáneo)
 #### Gráfica de datos X2.horas.suero.insulina
 
 ```{r}
+par(mfrow=c(2,1))
 hist(laboratorio$X2.horas.suero.insulina)
 boxplot(laboratorio$X2.horas.suero.insulina)
 ```
@@ -145,6 +151,7 @@ boxplot(laboratorio$X2.horas.suero.insulina)
 #### Gráfica de datos Índice.de.masa.corporal
 
 ```{r}
+par(mfrow=c(2,1))
 hist(laboratorio$Índice.de.masa.corporal)
 boxplot(laboratorio$Índice.de.masa.corporal)
 ```
@@ -154,6 +161,7 @@ boxplot(laboratorio$Índice.de.masa.corporal)
 #### Gráfica de datos Función.pedigrí.de.la.diabetes
 
 ```{r}
+par(mfrow=c(2,1))
 hist(laboratorio$Función.pedigrí.de.la.diabetes)
 boxplot(laboratorio$Función.pedigrí.de.la.diabetes)
 ```
@@ -163,6 +171,7 @@ boxplot(laboratorio$Función.pedigrí.de.la.diabetes)
 #### Gráfica de datos edad
 
 ```{r}
+par(mfrow=c(2,1))
 hist(laboratorio$edad)
 boxplot(laboratorio$edad)
 ```
