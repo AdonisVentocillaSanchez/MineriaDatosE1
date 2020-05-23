@@ -208,7 +208,12 @@ mean(is.na(laboratorio$X2.horas.suero.insulina)) * 100               #.114583
 ```
 
 
-
+Paso 3: Preparación de la data
+3.1 Seleccionar la data
+3.2 Limpiar la data
+3.3 Construir data
+3.4 Integración de data
+3.5 Formato de data
 
 
 

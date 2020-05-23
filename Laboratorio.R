@@ -122,6 +122,12 @@ summary(labnew2)
 ##--Comparación con la data original
 summary(labnew)
 
+X2.horas.suero.insulina_disc=nclass.Sturges(labnew2$X2.horas.suero.insulina)
+summary(X2.horas.suero.insulina_disc)
+
+X2.horas.suero.insulina = discretize(labnew2$X2.horas.suero.insulina, method = "interval", categories = 7)
+summary(X2.horas.suero.insulina)
+
 #construir data
 ##Tomar 2 o mas variable para crear nuevas variables
 
@@ -137,6 +143,8 @@ summary(Embarazo_disc)
 Embarazo_disc1 = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 8)
 summary(Embarazo_disc1)
 
+Concentrac.blucosa.plama_discretizada = discretize(labnew2$Concentrac.blucosa.plama, method = "interval", categories = 4)
+summary(Concentrac.blucosa.plama_discretizada)
 #Integración data
 
 
