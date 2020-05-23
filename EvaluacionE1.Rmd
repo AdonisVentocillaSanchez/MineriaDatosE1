@@ -3,8 +3,9 @@ title: "EvaluacionE1"
 author: "Inca, Santos, Toledo, Ventocilla"
 date: "21/5/2020"
 output:
-  html_document: default
+  word_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -224,16 +225,17 @@ head(labnew)
 
 Instalamos la librería para imputar datos.
 
-```{r eval=FALSE}
+```{r eval=FALSE, message=FALSE}
 install.packages("DMwR")
+install.packages("VIM")
 library(DMwR)
+library(VIM)
 ```
 
 Utilizaremos el método de imputación de KNN vecinos más cercanos para llenar los datos vacios en cada variable.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 labnew2 = knnImputation(labnew)
-dim(labnew2)
 summary(labnew2)
 ```
 
@@ -250,7 +252,7 @@ Creamos las variables discretizadas a partir de:
 - NumeroEmbarazos
 - edad
 
-```{r}
+```{r message=FALSE}
 #Segmentamos en 8 la variable NumeroEmbarazos 
 Embarazo_disc = discretize(labnew2$NumeroEmbarazos, method = "interval", categories = 8)
 #Segmentamos en 6 la variable edad
@@ -271,6 +273,7 @@ summary(labnew4)
 ### 3.5 Formato de data
 
 Realizamos un nuevo archivo "data_laboratorio.csv" con la nueva data creada. 
+Esta nueva data se puede ubicar en: <https://raw.githubusercontent.com/AdonisVentocillaSanchez/MineriaDatosE1/master/data_laboratorio.csv>
 
 ```{r eval=FALSE}
 write.csv(labnew3,file = "data_laboratorio.csv")
