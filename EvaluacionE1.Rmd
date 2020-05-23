@@ -175,6 +175,7 @@ hist(laboratorio$Función.pedigrí.de.la.diabetes, main = "")
 
 
 #### Gráfica de datos edad
+Mostramos que la mayor cantidad de personas entre 20 y 25 años es donde hay mas casos de diabetes  
 
 ```{r}
 par(mfrow=c(2,1))
@@ -185,7 +186,7 @@ hist(laboratorio$edad, main = "")
 
 
 #### Gráfica de datos resultado
-
+La claridad de dicha presentación es de vital importancia para la comprensión de los resultados y la interpretación de los mismos. A la hora de representar los resultados de un análisis estadístico de un modo adecuado, son varias las publicaciones que podemos consultar. Aunque la presentación de datos numéricos se haga habitualmente por medio de tablas, en ocasiones un diagrama o un gráfico pueden ayudarnos a representar de un modo más eficiente nuestros datos.
 ```{r}
 plot(laboratorio$resultado, main = "Resultados de personas con diabetes")
 ```
