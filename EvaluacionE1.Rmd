@@ -146,6 +146,8 @@ boxplot(laboratorio$X2.horas.suero.insulina)
 
 
 #### Gráfica de datos Índice.de.masa.corporal
+#Notamos que el indice de masa corporal se eleva entre 25 y 40kg, lo cual nos muestra que en la mayoria
+#de personas existe obesidad, como tambien una cantidad notoria de mejor salud en el indice de MC 20 a #25kg y un muy mal indice de 40 a 45kg. Asi mismo notamos vamos atipicos menores a 5kg y mayores a 65kg.
 
 ```{r}
 hist(laboratorio$Índice.de.masa.corporal)
@@ -155,7 +157,7 @@ boxplot(laboratorio$Índice.de.masa.corporal)
 
 
 #### Gráfica de datos Función.pedigrí.de.la.diabetes
-
+#Encontramos que la mayoría de personas en estudio tienen entre un 20% y 30% de probabilidad de tener #diabetes según antecedentes familiares.
 ```{r}
 hist(laboratorio$Función.pedigrí.de.la.diabetes)
 boxplot(laboratorio$Función.pedigrí.de.la.diabetes)
