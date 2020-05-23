@@ -132,6 +132,8 @@ hist(laboratorio$Presión.arterial.diastólica, main = "")
 
 #### Gráfica de datos Tríceps.espesor.del.pliegue.cutáneo
 
+###A partir de los pliegues cutáneos es posible obtener la densidad corporal utilizando fórmulas desarrolladas por regresión múltiple, que relacionan los pliegues medidos y la densidad corporal determinada por pesada hidrostática,los pliegues cutáneos permiten determinar el estado de la obesidad de una persona, y estos estudios son de gran relevancia entendiendo que las consecuencias adversas de la obesidad son significativas e incluyen incremento del riesgo de diabetes. 
+
 ```{r}
 par(mfrow=c(2,1))
 boxplot(laboratorio$Tríceps.espesor.del.pliegue.cutáneo, horizontal = TRUE, main = "Esppesor del pliegue cutáneo")
@@ -141,6 +143,8 @@ hist(laboratorio$Tríceps.espesor.del.pliegue.cutáneo, main = "")
 
 
 #### Gráfica de datos X2.horas.suero.insulina
+
+##El objetivo fundamental de la terapia con insulina es imitar los niveles de insulina normales. Desafortunadamente, la terapia de reemplazo de insulina actual sólo puede aproximarse a los niveles de insulina normales. La terapia con insulina para la diabetes tipo 2 varía desde una inyección por día hasta múltiples inyecciones y la utilización de una bomba de insulina. Cuanto más frecuentes las inyecciones de insulina mejor la aproximación a los niveles de insulina naturales o normales.
 
 ```{r}
 par(mfrow=c(2,1))
